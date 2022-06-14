@@ -1,0 +1,1006 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: Arial, Helvetica, sans-serif; }
+
+html {
+  font-size: 16px; }
+
+body {
+  min-height: 200vh; }
+
+.navbar {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  padding: 40px 0;
+  justify-content: space-between;
+  background: transparent;
+  transition: all 0.4s ease; }
+  .navbar__content {
+    width: 100%;
+    margin: auto;
+    padding: 0px 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .navbar__content__menu-list {
+      display: inline-flex; }
+      @media only screen and (max-width: 1022px) {
+        .navbar__content__menu-list {
+          /* display: none;  */
+          position: fixed;
+          top: 0;
+          left: -100%;
+          height: 100vh;
+          width: 100%;
+          max-width: 1022px;
+          background: darkblue;
+          display: block;
+          padding: 25px 0;
+          text-align: flex-start;
+          transition: all 0.4s ease; } }
+      .navbar__content__menu-list li {
+        list-style: none; }
+        @media only screen and (max-width: 1022px) {
+          .navbar__content__menu-list li {
+            margin-top: 35px;
+            border-bottom: 1px solid #1d1e11; } }
+        .navbar__content__menu-list li a {
+          color: #f7f1f1;
+          text-decoration: none;
+          font-size: 16px;
+          font-weight: 500;
+          margin-left: 25px;
+          transition: all 0.3s ease;
+          padding: 5px; }
+          @media only screen and (max-width: 1022px) {
+            .navbar__content__menu-list li a {
+              font-size: 20px; } }
+        .navbar__content__menu-list li a:hover {
+          color: #FF931E !important; }
+  .navbar .icon {
+    color: #e1e1eb;
+    font-size: 20px;
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+    display: none; }
+    @media only screen and (max-width: 1022px) {
+      .navbar .icon {
+        display: block; } }
+  .navbar .icon.cancel-btn {
+    position: absolute;
+    right: 30px;
+    top: 30px; }
+
+.navbar.sticky {
+  padding: 15px 0;
+  background: #fafaf8;
+  box-shadow: 0px 0px 5px 0px #00000075 !important; }
+  .navbar.sticky a {
+    color: black; }
+
+@media (max-width: 1022px) {
+  .icon.hide {
+    display: none; }
+  .navbar .navbar__content__menu-list.active {
+    left: 0%; } }
+
+@media (max-width: 1022px) {
+  .icon {
+    display: block; }
+  .icon.hide {
+    display: none; }
+  .navbar .navbar__content__menu-list {
+    /* display: none;  */
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    max-width: 1022px;
+    background: #2f2f97;
+    display: block;
+    padding: 25px 0;
+    text-align: flex-start;
+    transition: all 0.4s ease; }
+  .navbar .navbar__content__menu-list.active {
+    left: 0%; }
+  .navbar .navbar__content__menu-list li {
+    margin-top: 35px;
+    border-bottom: 1px solid #575856; }
+  .navbar .navbar__content__menu-list li a {
+    font-size: 16px; } }
+
+.banner {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: right center;
+  padding: 230px 120px; }
+  .banner .overlay {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background: black;
+    opacity: 0.2;
+    height: 100%;
+    width: 100%; }
+  .banner .image {
+    left: 0;
+    top: 0;
+    position: absolute;
+    background-image: url(https://www.simbrella.com/site/assets/files/1040/cover.jpg);
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -2; }
+    @media only screen and (max-width: 768px) {
+      .banner .image {
+        background-position: 60% 50%; } }
+  @media only screen and (max-width: 991px) {
+    .banner {
+      padding: 250px 0px;
+      background-position: top center; } }
+  @media only screen and (max-width: 991px) {
+    .banner .banner__container__bannerdesc {
+      padding: 78px 0px; } }
+  @media only screen and (max-width: 768px) {
+    .banner .banner__container__bannerdesc {
+      padding: 40px 30px; } }
+  .banner h1 {
+    color: white;
+    font-weight: bold; }
+    @media only screen and (max-width: 991px) {
+      .banner h1 {
+        font-size: 30px !important;
+        letter-spacing: 2px; } }
+  .banner p {
+    color: white;
+    margin: 30px 0; }
+  .banner .btn {
+    position: absolute;
+    color: #f6f3f3;
+    margin: 15px;
+    padding-top: 200px;
+    padding-right: 5px;
+    display: flex;
+    border: none;
+    text-align: center; }
+    .banner .btn span {
+      padding-left: 10px;
+      padding-top: 10px; }
+    @media only screen and (max-width: 991px) {
+      .banner .btn {
+        display: none; } }
+
+.we-do-container {
+  padding: 50px 200px;
+  width: 100%; }
+  .we-do-container .buton a {
+    display: inline-block;
+    height: 56px;
+    padding: 0 100px 0 24px;
+    border: 3.2px solid #e1dfdf;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 56px;
+    color: #222;
+    text-decoration: none;
+    background: url(https://www.simbrella.com/site/templates/img/link_orange_icon.svg) no-repeat calc(100% - 24px) 50%; }
+  .we-do-container .buton a:hover {
+    border-color: #ff931e;
+    transition: 0.6s;
+    transform: translateX(8px); }
+  .we-do-container h2 {
+    color: #2c2c88;
+    font-weight: bold; }
+  @media only screen and (max-width: 960px) {
+    .we-do-container {
+      padding: 48px; } }
+  @media (min-width: 240px) and (max-width: 479px) {
+    .we-do-container {
+      padding: 0 0 16px;
+      font-size: 27px;
+      margin: 20px 10px; } }
+  .we-do-container__what {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between; }
+    @media (min-width: 240px) and (max-width: 479px) {
+      .we-do-container__what {
+        display: block;
+        padding: 0 0 30px; } }
+
+.grid {
+  padding-top: 50px;
+  display: grid;
+  width: 100%;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  align-items: start; }
+  @media only screen and (max-width: 960px) {
+    .grid {
+      grid-gap: 16px; } }
+  @media (min-width: 240px) and (max-width: 479px) {
+    .grid {
+      grid-template-columns: 1fr;
+      grid-auto-rows: minmax(min-content, max-content);
+      grid-gap: 15px 10px;
+      width: 100%;
+      padding: 0 20px; } }
+  .grid__grid-item {
+    max-height: 450px;
+    background-color: #ffffff;
+    border-radius: 6.4px;
+    overflow: hidden;
+    box-shadow: 0 48px 96px rgba(0, 0, 0, 0.1);
+    border: 1px solid gainsboro;
+    cursor: pointer;
+    transition: 0.6s; }
+    @media (min-width: 240px) and (max-width: 479px) {
+      .grid__grid-item {
+        height: auto;
+        min-height: 90px;
+        width: auto;
+        position: static; } }
+    .grid__grid-item a {
+      text-decoration: none; }
+      @media (min-width: 240px) and (max-width: 479px) {
+        .grid__grid-item a {
+          width: 100%;
+          min-height: 90px;
+          padding: 14px 0;
+          clip-path: none !important;
+          font-size: 12px; } }
+  .grid__grid-item:hover {
+    transform: scale(1.05); }
+  .grid .grid-item__card__content {
+    padding: 50px; }
+    .grid .grid-item__card__content h3 {
+      padding-bottom: 20px;
+      color: black; }
+    .grid .grid-item__card__content p {
+      color: gray; }
+  .grid .card-img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: contain; }
+
+.tech-powered {
+  width: 100%;
+  height: 600px;
+  background-image: url("https://www.simbrella.com/site/assets/files/1049/solutions_bg-1.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row; }
+  @media (min-width: 240px) and (max-width: 479px) {
+    .tech-powered {
+      min-height: 1px;
+      height: auto;
+      padding: 0px 0;
+      background-position: 50% 100%;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-content: stretch;
+      -webkit-box-align: stretch;
+      align-items: stretch;
+      padding: 0; } }
+  @media only screen and (max-width: 768px) {
+    .tech-powered {
+      background-image: url("https://www.simbrella.com/site/assets/files/1049/solutions_bg-1.jpg");
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: white; } }
+  .tech-powered__left {
+    width: 50%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    @media (min-width: 240px) and (max-width: 479px) {
+      .tech-powered__left {
+        width: 100%;
+        height: 350px; } }
+    .tech-powered__left h2 {
+      width: 520px;
+      color: white;
+      text-align: left;
+      font-size: 54px;
+      line-height: 1.29;
+      letter-spacing: 0.01em;
+      text-shadow: 2px 2px 6px black;
+      font-weight: bold; }
+      @media only screen and (max-width: 768px) {
+        .tech-powered__left h2 {
+          width: 70%; } }
+      @media (min-width: 240px) and (max-width: 479px) {
+        .tech-powered__left h2 {
+          padding: 100px 20px 100px;
+          width: 100%;
+          font-size: 27px;
+          line-height: 1.7;
+          text-align: center; } }
+  .tech-powered__right {
+    width: 50%;
+    height: 100%;
+    background-color: rgba(45, 49, 146, 0.6);
+    animation-name: slide;
+    animation-iteration-count: 1;
+    animation-duration: 1.3s; }
+
+@keyframes slide {
+  0% {
+    height: 0%; }
+  100% {
+    height: 100%; } }
+    @media only screen and (max-width: 768px) {
+      .tech-powered__right {
+        background-color: rgba(45, 49, 146, 0.6); } }
+    @media (min-width: 240px) and (max-width: 479px) {
+      .tech-powered__right {
+        width: 100%;
+        background: rgba(45, 49, 146, 0.6); } }
+    .tech-powered__right ul {
+      padding-top: 30px;
+      padding-left: 100px;
+      list-style-type: none;
+      display: block;
+      align-items: center;
+      justify-content: center; }
+      @media only screen and (max-width: 768px) {
+        .tech-powered__right ul {
+          list-style-type: none !important;
+          width: 80% !important; } }
+      .tech-powered__right ul li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        padding: 12px 0;
+        text-align: left;
+        margin-top: 20px; }
+        @media only screen and (max-width: 768px) {
+          .tech-powered__right ul li {
+            border-bottom: 1px solid #504e78;
+            font-weight: bold; } }
+        @media (min-width: 240px) and (max-width: 479px) {
+          .tech-powered__right ul li {
+            padding: 0px 0px;
+            width: 100%; } }
+        .tech-powered__right ul li h3 {
+          color: white;
+          opacity: 1;
+          padding: 0 0 0px;
+          font-weight: bold;
+          font-size: 21px;
+          line-height: 1.12; }
+          @media (min-width: 240px) and (max-width: 479px) {
+            .tech-powered__right ul li h3 {
+              font-size: 16px;
+              font-weight: 500;
+              text-align: center;
+              line-height: 1.4; } }
+
+.enhance {
+  width: 100%;
+  height: 500px; }
+  @media (min-width: 240px) and (max-width: 479px) {
+    .enhance {
+      padding: 30px 0;
+      width: 100%; } }
+  .enhance .container {
+    width: 1100px;
+    position: relative;
+    flex-wrap: wrap;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    justify-content: center; }
+    @media (min-width: 240px) and (max-width: 479px) {
+      .enhance .container {
+        width: 100%;
+        position: relative;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center; } }
+    .enhance .container h2 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 36px;
+      color: #2D3192;
+      font-weight: bold;
+      display: flex;
+      width: 90%;
+      left: 0px;
+      margin-top: 40px;
+      margin-right: 5px; }
+      @media (min-width: 240px) and (max-width: 479px) {
+        .enhance .container h2 {
+          padding: 0 0 10px;
+          font-size: 24px;
+          text-align: center; } }
+    .enhance .container .demo {
+      flex-wrap: wrap;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center; }
+      @media (min-width: 240px) and (max-width: 479px) {
+        .enhance .container .demo {
+          flex-wrap: wrap;
+          margin: 0 auto;
+          display: flex;
+          justify-content: center; } }
+      .enhance .container .demo .numbers {
+        width: 326px;
+        height: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center; }
+        @media (min-width: 240px) and (max-width: 479px) {
+          .enhance .container .demo .numbers {
+            width: 100%;
+            padding: 20px 0;
+            padding: 0px 0;
+            border: none !important;
+            display: flex;
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center; } }
+        .enhance .container .demo .numbers p {
+          color: #FF931E;
+          font-size: 45px;
+          padding: 5px;
+          font-family: Arial, Helvetica, sans-serif;
+          font-weight: bold; }
+          @media (min-width: 240px) and (max-width: 479px) {
+            .enhance .container .demo .numbers p {
+              padding: 0 0 6px;
+              font-size: 27px; } }
+        .enhance .container .demo .numbers span {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          font-family: Arial, Helvetica, sans-serif; }
+          @media (min-width: 240px) and (max-width: 479px) {
+            .enhance .container .demo .numbers span {
+              font-size: 12px;
+              padding: 0 0 6px;
+              display: block; } }
+
+.countries-circle:hover, .countries-circle-orange:hover {
+  cursor: pointer; }
+
+.country-map-prm:hover {
+  fill: darkblue !important;
+  cursor: pointer; }
+
+.country-map-scn:hover {
+  fill: darkblue !important;
+  cursor: pointer; }
+
+.world-map .container .row .header-of-map h2 {
+  color: darkblue;
+  font-size: 36px !important;
+  font-weight: bold; }
+
+.world-map .container .row .explanation-of-circles {
+  z-index: 1;
+  border-radius: 4px;
+  border-color: #e1e1e1 !important; }
+  .world-map .container .row .explanation-of-circles .orange {
+    margin: 0 0 16px;
+    padding-left: 22px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-transform: capitalize;
+    color: #222;
+    position: relative; }
+    .world-map .container .row .explanation-of-circles .orange::before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: calc(50% - 10px);
+      background: darkblue;
+      opacity: 0.3; }
+    .world-map .container .row .explanation-of-circles .orange::after {
+      content: "";
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      position: absolute;
+      left: 7px;
+      top: calc(50% - 3px);
+      background: #bc840c; }
+  .world-map .container .row .explanation-of-circles .blue {
+    margin: 0 0 16px;
+    padding-left: 22px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-transform: capitalize;
+    color: #222;
+    position: relative; }
+    .world-map .container .row .explanation-of-circles .blue::before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: calc(50% - 10px);
+      opacity: 0.3;
+      background-color: darkblue; }
+    .world-map .container .row .explanation-of-circles .blue::after {
+      content: "";
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      position: absolute;
+      left: 7px;
+      top: calc(50% - 3px);
+      background-color: darkblue; }
+  .world-map .container .row .explanation-of-circles .mix-of-colors {
+    padding: 0 0 0 30px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-transform: capitalize;
+    color: #222;
+    position: relative; }
+    .world-map .container .row .explanation-of-circles .mix-of-colors::before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: calc(50% - 10px);
+      opacity: 1;
+      background: url("https://www.simbrella.com/site/templates/img/both_icon.svg") no-repeat 50%;
+      background-size: 24px; }
+
+.our-clients {
+  width: 100%;
+  height: 700px;
+  background-color: #f6f8fe; }
+  .our-clients h2 {
+    font-size: 36px;
+    color: #2d3192;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 220px;
+    font-weight: bold;
+    padding-top: 20px; }
+    @media (min-width: 240px) and (max-width: 479px) {
+      .our-clients h2 {
+        padding: 0 0 20px;
+        font-size: 24px; } }
+  .our-clients__frame {
+    width: 1100px;
+    height: 550px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    position: relative; }
+    .our-clients__frame__box {
+      width: 252px;
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #d5dde4;
+      background-color: white;
+      border-radius: 4px;
+      margin: 0 auto; }
+      .our-clients__frame__box img {
+        width: 100px; }
+      .our-clients__frame__box span {
+        text-align: center;
+        font-size: 24px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #333333; }
+    .our-clients__frame--misc {
+      display: none; }
+
+.team {
+  padding-left: 200px;
+  margin: 75px 0;
+  width: 100%; }
+  .team__container {
+    padding-left: 250px; }
+  .team .profile {
+    margin-top: 25px;
+    width: 220px; }
+    .team .profile .img-box {
+      background-image: url(https://www.simbrella.com/site/templates/img/figure_green_bg.png);
+      border-radius: 3px;
+      display: block;
+      position: relative;
+      width: 200px; }
+    .team .profile h3 {
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 10px; }
+    .team .profile p {
+      color: gray; }
+  .team h1 {
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #2c2c88; }
+  @media only screen and (max-width: 1022px) {
+    .team {
+      display: none; } }
+
+.team2 {
+  width: 100%; }
+  @media only screen and (max-width: 1022px) {
+    .team2 {
+      display: none; } }
+
+.work-with-us {
+  width: 100%;
+  height: 700px;
+  background-color: #f6f8fe; }
+  @media (min-width: 240px) and (max-width: 479px) {
+    .work-with-us {
+      padding: 20px 0 0px; } }
+  @media (min-width: 240px) and (max-width: 479px) {
+    .work-with-us .row {
+      height: 400px; } }
+  .work-with-us h1 {
+    padding-top: 30px;
+    font-weight: bold;
+    color: #2d3192;
+    text-transform: capitalize; }
+    @media (min-width: 240px) and (max-width: 479px) {
+      .work-with-us h1 {
+        padding: 0 0 5px;
+        font-size: 24px; } }
+  .work-with-us .work-with-us__container {
+    width: 75%;
+    height: 400px; }
+    .work-with-us .work-with-us__container__icon {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly; }
+      @media (min-width: 240px) and (max-width: 479px) {
+        .work-with-us .work-with-us__container__icon {
+          padding: 0 0 0px;
+          display: flex; } }
+      @media (min-width: 240px) and (max-width: 479px) {
+        .work-with-us .work-with-us__container__icon .col-for-5-items {
+          width: calc(33.333% - 10px);
+          padding: 0 0 10px;
+          text-align: center; } }
+  @media (min-width: 240px) and (max-width: 479px) and (min-width: 240px) and (max-width: 479px) {
+    .work-with-us .work-with-us__container__icon .col-for-5-items img {
+      width: 47%; } }
+      .work-with-us .work-with-us__container__icon p {
+        font-weight: bold; }
+        @media (min-width: 240px) and (max-width: 479px) {
+          .work-with-us .work-with-us__container__icon p {
+            font-size: 14px;
+            padding: 0 0 5px; } }
+    .work-with-us .work-with-us__container__image {
+      width: 600px;
+      height: 400px; }
+      @media (min-width: 240px) and (max-width: 479px) {
+        .work-with-us .work-with-us__container__image {
+          max-width: 100%;
+          height: 250px; } }
+      .work-with-us .work-with-us__container__image .img {
+        border-radius: 4px 4px 0 0; }
+    .work-with-us .work-with-us__container__vacancies-part {
+      background-color: #2d3192;
+      color: white;
+      padding: 30px 60px; }
+      @media (min-width: 240px) and (max-width: 479px) {
+        .work-with-us .work-with-us__container__vacancies-part {
+          width: 100%;
+          padding: 10px;
+          margin: 0;
+          border-radius: 0 0 4px 4px; } }
+      .work-with-us .work-with-us__container__vacancies-part h3 {
+        font-size: 35px;
+        padding-bottom: 40px; }
+        @media (min-width: 240px) and (max-width: 479px) {
+          .work-with-us .work-with-us__container__vacancies-part h3 {
+            padding: 0 0 10px;
+            font-size: 21px; } }
+      .work-with-us .work-with-us__container__vacancies-part p {
+        padding-bottom: 20px; }
+        @media (min-width: 240px) and (max-width: 479px) {
+          .work-with-us .work-with-us__container__vacancies-part p {
+            padding: 0 0 10px;
+            font-size: 14px; } }
+      .work-with-us .work-with-us__container__vacancies-part .button-for-vacancies {
+        border-radius: 11px !important;
+        border: 3px solid #cccccc;
+        outline: none;
+        color: white;
+        font-size: 15px;
+        font-weight: 600;
+        padding: 12px;
+        text-decoration: none; }
+        @media (min-width: 240px) and (max-width: 479px) {
+          .work-with-us .work-with-us__container__vacancies-part .button-for-vacancies {
+            padding: 0 10 20px; } }
+        .work-with-us .work-with-us__container__vacancies-part .button-for-vacancies:hover {
+          border-color: #ff931e; }
+        .work-with-us .work-with-us__container__vacancies-part .button-for-vacancies:hover img {
+          transform: translateX(5px);
+          transition: 0.2s; }
+  .work-with-us .vac {
+    display: flex;
+    flex-direction: column;
+    padding: 40px; }
+    @media (min-width: 240px) and (max-width: 479px) {
+      .work-with-us .vac {
+        padding: 20px; } }
+
+.footer-contact {
+  background-image: url(https://www.simbrella.com/site/templates/img/footer_bg.svg);
+  background-color: black;
+  background-repeat: no-repeat; }
+  .footer-contact__first {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 35px 0 25px; }
+    .footer-contact__first h2 {
+      margin-top: 15px;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 1.29;
+      letter-spacing: 0.01em;
+      color: #fff; }
+    .footer-contact__first__header {
+      width: 100%; }
+      .footer-contact__first__header nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 0 50px 0; }
+        .footer-contact__first__header nav a {
+          text-decoration: none;
+          display: flex;
+          justify-content: start;
+          align-items: center;
+          height: 36px;
+          padding: 0 30px 0 30px;
+          font-weight: 600px;
+          text-decoration: none;
+          font-size: 19px;
+          cursor: pointer; }
+        .footer-contact__first__header nav a:hover {
+          color: #ff931e;
+          transition: 0.3s; }
+      .footer-contact__first__header .baku_tab {
+        border-right: 1px solid #999999;
+        border-left: 1px solid #999999; }
+      .footer-contact__first__header ul {
+        display: flex;
+        justify-content: space-between; }
+      .footer-contact__first__header li {
+        list-style: none;
+        padding: 0 0 0 40px;
+        color: #999999; }
+        .footer-contact__first__header li a {
+          color: #999999; }
+      .footer-contact__first__header li:hover {
+        color: #ff931e; }
+      .footer-contact__first__header li:first-child a {
+        color: #ff931e; }
+  .footer-contact .branches {
+    margin-top: 10px;
+    height: 60%; }
+    .footer-contact .branches a {
+      box-shadow: inset 0 0 0 3px #ffffff;
+      border-radius: 15px;
+      height: 100%; }
+      .footer-contact .branches a p {
+        color: white;
+        padding-top: 10px; }
+    .footer-contact .branches a:hover {
+      color: #ff931e;
+      box-shadow: inset 0 0 0 3px #ff931e;
+      transform: translateX(2px); }
+    .footer-contact .branches__branches-icon {
+      padding: 0 0 0 50px;
+      transition: 0.4s; }
+      .footer-contact .branches__branches-icon :hover {
+        transform: translateX(5px); }
+  .footer-contact .footer-contact__first__body {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start; }
+    .footer-contact .footer-contact__first__body ul li {
+      color: white; }
+      .footer-contact .footer-contact__first__body ul li span {
+        font-size: 20px;
+        color: #999999; }
+    .footer-contact .footer-contact__first__body a {
+      text-decoration: none;
+      padding: 0 0 10px 0; }
+    .footer-contact .footer-contact__first__body__paragraph {
+      padding: 30px 0 0 0;
+      font-size: 20px; }
+      .footer-contact .footer-contact__first__body__paragraph__second {
+        padding: 22px 0 0 0; }
+  .footer-contact .footer-end {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    padding: 0 0 40px 0; }
+    .footer-contact .footer-end__by {
+      display: flex; }
+      .footer-contact .footer-end__by p {
+        color: white;
+        padding: 15px 0 0 0; }
+      .footer-contact .footer-end__by a {
+        text-decoration: none;
+        color: white;
+        padding: 0 0 0 18px; }
+      .footer-contact .footer-end__by a:hover {
+        text-decoration: underline; }
+    .footer-contact .footer-end .copyright {
+      padding: 6px 0 0 70px; }
+      .footer-contact .footer-end .copyright span {
+        color: #999999;
+        font-size: 17px; }
+    .footer-contact .footer-end .footer-end {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      color: wheat;
+      margin-top: 50px;
+      padding: 25px; }
+    .footer-contact .footer-end__by {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      width: 33.33%;
+      font-size: 15px; }
+      .footer-contact .footer-end__by a {
+        color: wheat;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        font-size: 14px;
+        text-decoration: none; }
+      .footer-contact .footer-end__by a:hover {
+        text-decoration: underline; }
+      .footer-contact .footer-end__by img {
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: center; }
+    .footer-contact .footer-end .footer-end_copyright {
+      display: flex;
+      justify-content: start;
+      align-items: flex-start;
+      width: 50%; }
+      .footer-contact .footer-end .footer-end_copyright p {
+        color: #999999; }
+
+.header .header-part {
+  width: 100%;
+  height: 300px;
+  background-color: #0c0D26;
+  background-image: url("https://www.simbrella.com/site/templates/img/vacancies_header_bg.svg");
+  background-position: top;
+  position: relative; }
+  .header .header-part__nav {
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center; }
+    .header .header-part__nav__img {
+      padding-left: 200px; }
+  .header .header-part__new {
+    width: 500px;
+    height: 200px;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center; }
+
+.header-write {
+  border-bottom: 1px solid #E7E7E7; }
+  .header-write__title {
+    text-align: center; }
+  .header-write__ul {
+    text-align: center; }
+
+.apply-section {
+  background-color: #1d1d69;
+  width: 100%;
+  height: 600px; }
+  .apply-section .container h2 {
+    color: white;
+    padding-top: 40px;
+    padding-left: 200px;
+    font-size: 35px; }
+  .apply-section .container .application {
+    display: flex;
+    border-bottom: 1px solid red;
+    justify-content: space-between;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    width: 100%; }
+    .apply-section .container .application input {
+      display: block;
+      height: 64px;
+      padding: 0 20px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      background: none;
+      font-size: 16px;
+      font-weight: 300;
+      font-family: 'fooont';
+      color: #fff;
+      border-radius: 12px; }
+    .apply-section .container .application label {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-content: stretch;
+      align-items: center;
+      width: 100%;
+      height: 64px;
+      text-align: center;
+      border: 1px dashed rgba(255, 255, 255, 0.5);
+      border-radius: 12px;
+      cursor: pointer; }
+    .apply-section .container .application #upload-cv {
+      display: inline-block;
+      padding: 0 10px 0 27px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 2;
+      color: #fff;
+      white-space: nowrap;
+      max-width: 70%;
+      text-overflow: ellipsis;
+      background: url("https://www.simbrella.com/site/templates/img/file_white_icon.svg") no-repeat 0 50%; }
+    .apply-section .container .application .button-for-vacancies {
+      border-radius: 11px !important;
+      border: 3px solid #cccccc;
+      outline: none;
+      color: black;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 12px;
+      height: 64px; }

@@ -1,0 +1,86 @@
+@import "../pages/mixins";
+.banner {
+  // background-image: url(https://www.simbrella.com/site/assets/files/1040/cover.jpg);
+  height: 100vh;
+  
+   width: 100%;
+   position: relative;
+   background-size: cover;
+   background-position: right center;
+  padding: 230px 120px;
+ 
+  .overlay{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background: black;
+    opacity: 0.2;
+    height: 100%;
+    width: 100%;
+  }
+  .image{
+    left: 0;
+    top: 0;
+    position: absolute;
+    background-image: url(https://www.simbrella.com/site/assets/files/1040/cover.jpg);
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    @include responsivemin{
+      background-position: 60% 50%;
+    }
+  }
+    
+  @include mobileversion {
+    padding: 250px 0px;
+    background-position: top center;
+  }
+  .banner__container__bannerdesc {
+    @include mobileversion {
+      padding: 78px 0px;
+    }
+    @include responsivemin{
+     padding: 40px 30px;
+     
+    }
+
+  }
+  h1 {
+    color: white;
+    font-weight: bold;
+
+    @include mobileversion {
+      font-size: 30px !important;
+      letter-spacing: 2px;
+    }
+    
+   
+  }
+  p {
+    color: white;
+    margin: 30px 0;
+  }
+  .btn {
+    position: absolute;
+
+    color: #f6f3f3;
+    margin: 15px;
+    padding-top: 200px;
+    padding-right: 5px;
+    display: flex;
+    border: none;
+    text-align: center;
+    span {
+      padding-left: 10px;
+      padding-top: 10px;
+    }
+    @include mobileversion {
+      display: none;
+    }
+  }
+}
